@@ -31,14 +31,14 @@ if(isset($_POST["export"]))
    ';
   }
   $output .= '</table>';
-  header('Content-Type: application/xls');
-  header('Content-Disposition: attachment; filename=download.xls');
+  // header('Content-Type: application/xls');
+  // header('Content-Disposition: attachment; filename=download.xls');
   /**
    *  Using the applictaion/xls, returns an error when opening the spreadsheet with Excel 2016 
-   *  Recommend this instead: 
-   *   header('Content-type: application/octet-stream');
-   *   header('Content-Disposition: attachment; filename=download.csv');
+   *  Recommend the follwing instead.
    **/
+  header('Content-type: application/octet-stream');
+  header('Content-Disposition: attachment; filename=download.csv');
   echo $output;
  }
 }
