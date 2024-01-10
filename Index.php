@@ -41,7 +41,7 @@ $result = mysqli_query($connect, $sql);
      ?>
     </table>
     <br />
-    <form method="post" action="export.php">
+    <form method="post" action="Export.php">
      <input type="submit" name="export" class="btn btn-success" value="Export" />
     </form>
    </div>  
